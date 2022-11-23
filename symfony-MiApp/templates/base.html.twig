@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>App</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
 <link rel="icon" href="images/favicon.ico">
@@ -51,30 +51,12 @@
       </div>
     </div>
   </div>
-  <section id="stuck_container">
-  <!--==============================
-              Stuck menu
-  =================================-->
-    <div class="container">
-      <div class="row">
-        <div class="grid_12 ">
-          <div class="navigation ">
-            <nav>
-              <ul class="sf-menu">
-               <li class="current"><a href="index.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="services.html">Services</a></li>
-               <li><a href="blog.html">Blog</a></li>
-               <li><a href="contacts.html">Contacts</a></li>
-             </ul>
-            </nav>
-            <div class="clear"></div>
-          </div>       
-         <div class="clear"></div>  
-        </div>
-     </div> 
-    </div> 
-  </section>
+  
+
+  {{ include ('partials/navigation.html.twig')}}
+
+
+
   <section class="page1_header">
     <div class="container">
       <div class="row">

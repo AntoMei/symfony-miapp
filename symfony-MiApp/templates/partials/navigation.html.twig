@@ -1,0 +1,24 @@
+<section id="stuck_container">
+  <!--==============================
+              Stuck menu
+  =================================-->
+    <div class="container">
+      <div class="row">
+        <div class="grid_12 ">
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+               <li class="{{ (app.request.attributes.get('_route') == 'index')  ? 'active': ''}}"><a href="{{ path('index') }}">Home</a></li>
+                <li class="{{ (app.request.attributes.get('_route') == 'about')  ? 'active': ''}}"><a href="{{ path('about')}}">About</a></li>
+                <li class="{{ (app.request.attributes.get('_route') == 'services')  ? 'active': ''}}"><a href="{{ path('services')}}">Services</a></li>
+                <li class="{{ (app.request.attributes.get('_route') == 'blog')  ? 'active': ''}}"><a href="{{ path('blog')}}">Blog</a></li>
+                <li class="{{ (app.request.attributes.get('_route') == 'contact')  ? 'active': ''}}"><a href="{{ path('contact')}}">Contacts</a></li>
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>       
+         <div class="clear"></div>  
+        </div>
+     </div> 
+    </div> 
+  </section>
