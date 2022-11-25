@@ -3,15 +3,20 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+<div id="register">
+    <div class="container">
+        <h4>Register</h4>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        {{ form_start(registrationForm, { 'attr': {'id': 'contact-form', 'class':'form-horizontal'}}) }}
+            {{ form_row(registrationForm.email,  {'attr': {'class':'form-control', 'placeholder': 'Email'}}) }}
+            <br>
+            {{ form_row(registrationForm.name,  {'attr': {'class':'form-control', 'placeholder': 'Name'}}) }}
+            <br>
+            {{ form_row(registrationForm.plainPassword,  {'attr': {'class':'form-control', 'placeholder': 'Password'}}) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+            <button type="submit" class="pull-right btn btn-lg sr-button">Register</button> 
+        {{ form_end(registrationForm) }}
+    </div>
+    <br>
+</div>
 {% endblock %}
