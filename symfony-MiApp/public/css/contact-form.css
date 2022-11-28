@@ -137,6 +137,7 @@
   margin: 0;
   background-color: #f7f9fa;
 }
+
 #inputPassword{
   width: 100%;
   border-radius: 4px;
@@ -153,6 +154,67 @@
   box-sizing: border-box;
   margin: 0;
   background-color: #f7f9fa;
+}
+
+#post_form_title{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#post_form_content{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#post_form_image{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#post_form_Send{
+  margin-top: 4px;
+  padding: 6px 20px 5px;
+  margin-left: 94%;
+ 
 }
 
 /* Contact Form File Input 

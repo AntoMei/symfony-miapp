@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title%}Blog{% endblock %}
+{% block body%}
+<!-- Principal Content Start -->
+   <div id="new Post">
+   	  <div class="container">
+   	    <div class="col-xs-12 col-sm-8 col-sm-push-2">
+       	   <h4>New Post</h4>
+			   {{ form(form, {'attr': {'class':'form-horizontal'}}) }}
+       	   <hr class="divider">
+		</div>   
+   	  </div>
+   </div>
+<!-- Principal Content Start -->
+{% endblock %}
