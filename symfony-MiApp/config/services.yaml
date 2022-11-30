@@ -22,3 +22,7 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+parameters:
+    images_directory: '%kernel.project_dir%/public/images/index/gallery'
+    portfolio_directory: '%kernel.project_dir%/public/images/index/portfolio'
+    post_image_directory: '%kernel.project_dir%/publi/images/index/blog'

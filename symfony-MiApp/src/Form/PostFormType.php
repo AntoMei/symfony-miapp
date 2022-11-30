@@ -18,7 +18,7 @@ class PostFormType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('Image', FileType::class,[
+            ->add('image', FileType::class,[
                 'mapped' => false,
                 'constraints' => [
                     new File([

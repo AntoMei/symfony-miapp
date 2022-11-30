@@ -217,6 +217,128 @@
  
 }
 
+#category_form_name{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#category_form_Send{
+  margin-top: 4px;
+  padding: 6px 20px 5px;
+  margin-left: 94%;
+ 
+}
+
+#image_form_file{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#image_form_numLikes{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#image_form_numViews{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#image_form_numDownloads{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#image_form_category{
+  width: 100%;
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px 20px 5px;
+  outline: none;
+  color: #626161;
+  height: 31px;
+  border: 1px solid #f0efef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f7f9fa;
+}
+
+#image_form_Send{
+  margin-top: 4px;
+  padding: 6px 20px 5px;
+  margin-left: 94%;
+ 
+}
+
 /* Contact Form File Input 
 ========================================================*/
 #contact-form .input-group {
