@@ -53,15 +53,26 @@ class BlogController extends AbstractController
         
             $post = $form->getData();   
             $post->setSlug($slugger->slug($post->getTitle()));
-            $post->setUser($this->getUser());
+            $post->setPostUser($this->getUser());
             $post->setNumLikes(0);
             $post->setNumComments(0);
             $entityManager = $doctrine->getManager();    
             $entityManager->persist($post);
             $entityManager->flush();
+            return $this->redirectToRoute('single_post', ["slug" => $post->getSlug()]);
         }
         return $this->render('blog/new_post.html.twig', array(
             'form' => $form->createView()    
         ));
+    }
+
+    #[Route('/single_post/{slug}', name: 'single_post')]
+    public function post(ManagerRegistry $doctrine, $slug): Response
+    {
+        $repositorio = $doctrine->getRepository(Post::class);
+        $post = $repositorio->findOneBy(["slug"=>$slug]);
+        return $this->render('blog/single_post.html.twig', [
+            'post' => $post,
+        ]);
     }
 }

@@ -84,14 +84,14 @@ class Post
         return $this;
     }
 
-    public function getUser(): ?User
+    public function getPostUser(): ?User
     {
-        return $this->User;
+        return $this->postUser;
     }
 
-    public function setUser(?User $User): self
+    public function setPostUser(?User $postUser): self
     {
-        $this->User = $User;
+        $this->postUser = $postUser;
 
         return $this;
     }
