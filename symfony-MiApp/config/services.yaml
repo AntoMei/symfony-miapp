@@ -25,4 +25,4 @@ services:
 parameters:
     images_directory: '%kernel.project_dir%/public/images/index/gallery'
     portfolio_directory: '%kernel.project_dir%/public/images/index/portfolio'
-    post_image_directory: '%kernel.project_dir%/publi/images/index/blog'
+    post_image_directory: '%kernel.project_dir%/public/images/index/blog'

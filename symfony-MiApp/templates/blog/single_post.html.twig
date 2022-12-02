@@ -11,9 +11,9 @@
     <!-- Full Article -->
       <div class="row">
       <div class="post-heading">
-        <img class="img-responsive" src="{{ asset('images/blog/' ~ post.image) }}" alt="{{post.title}}">
+            <h4>{{post.title}}</h4>
+        <img class="img-responsive" src="{{ asset('images/index/blog/' ~ post.image) }}" alt="{{post.title}}">
       </div>
-      <h2>{{post.title}}</h2>
       <hr class="subtitle">
       <div class=" block1">
       <div class="col-xs-12 col-sm-9">
@@ -25,15 +25,13 @@
         <ul class="list-inline">
           <li>{{ post.publishedAt | date('d') }} {{ post.publishedAt | date('F') }}</li>
           <li><a class="page-scroll" href="#form">COMMENT</a> |</li>
-            <li><a href="{{ path('post_like', {slug: post.slug}) }}">LIKE</a> <i class="fa fa-heart sr-icons"></i> {{post.numLikes}}</li>
+            <li><a href="">LIKE</a> <i class="fa fa-heart sr-icons"></i> {{post.numLikes}}</li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-3">
         <h4>Recent Post</h4>
         <hr class="subtitle1">
-        {% for recent in recents %}
-        {{ include ('partials/recent_post.html.twig', {'recent': recent}) }}
-        {% endfor %}
+  
       </div>
       </div>
       </div>
@@ -42,11 +40,9 @@
     <!-- Comments -->
       <div class="row">
       <div class="col-xs-12 col-sm-12 block2">
-        {% for comment in post.comments %}
-        {{ include ('partials/comment.html.twig', {'comment': comment}) }}
-        {% endfor %}
+       
           <hr class="line">
-            {{ include ('partials/form_comment.html.twig') }}
+            
           </div>
       </div>
       </div>
