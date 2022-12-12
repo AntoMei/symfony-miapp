@@ -1,0 +1,10 @@
+<div class="blog">
+    <time datetime="2014-01-01"><span class="count">02</span><strong>July</strong>2014</time>
+     <img src="{{asset('images/index/blog/' ~ post.image)}}" width="150" height="150" alt="" class="img_inner fleft"/>
+        <div class="extra_wrapper">
+            <a href="#" class="comment"><span class="fa fa-comments"></span> 3</a>
+            <h4>{{post.title}}</h4>
+            <p><span class="fwn">{{ post.content}}<span></p>
+            <br>
+            <p class="spec"><a href="{{ path('single_post', {slug: post.slug}) }}" class="rm">more &raquo;</a></p>        </div>
+</div>

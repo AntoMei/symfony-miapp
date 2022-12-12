@@ -15,12 +15,24 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 class BlogController extends AbstractController
 {
     #[Route('/blog', name: 'blog')]
-    public function index(): Response
+    public function indexOld(): Response
     {
         return $this->render('blog/blog.html.twig', [
             'controller_name' => 'BlogController',
         ]);
     }
+
+    #[Route('/blog/{page}', name: 'blog', requirements: ['page' => '\d+'])]
+    public function index(ManagerRegistry $doctrine, int $page = 1): Response
+    {
+        $repository = $doctrine->getRepository(Post::class);
+        $posts = $repository->findAll($page);
+
+        return $this->render('blog/blog.html.twig', [
+            'posts' => $posts,
+        ]);
+    }
+
 
      /**
      * @Route("/blog/new", name="new_post")
