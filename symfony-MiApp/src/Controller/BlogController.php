@@ -40,18 +40,7 @@ class BlogController extends AbstractController
             'controller_name' => 'BlogController',
         ]);
     }
-
-    #[Route('/blog/{page}', name: 'blog')]
-    public function index(ManagerRegistry $doctrine, int $page = 1): Response
-    {
-        $repository = $doctrine->getRepository(Post::class);
-        $posts = $repository->findAllPaginated($page);
-
-        return $this->render('blog/blog.html.twig', [
-            'posts' => $posts,
-        ]);
-    }
-
+    
      /**
      * @Route("/blog/new", name="new_post")
      */
@@ -95,6 +84,19 @@ class BlogController extends AbstractController
             'form' => $form->createView()    
         ));
     }
+
+    #[Route('/blog/{page}', name: 'blog')]
+    public function index(ManagerRegistry $doctrine, int $page = 1): Response
+    {
+        $repository = $doctrine->getRepository(Post::class);
+        $posts = $repository->findAllPaginated($page);
+
+        return $this->render('blog/blog.html.twig', [
+            'posts' => $posts,
+        ]);
+    }
+
+    
 
     #[Route('/single_post/{slug}/like', name: 'post_like')]
     public function like(ManagerRegistry $doctrine, $slug): Response
