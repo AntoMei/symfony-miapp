@@ -16,6 +16,23 @@ use App\Form\CommentFormType;
 
 class BlogController extends AbstractController
 {
+
+    /**
+     * @Route("/blog/buscar/{page}", name="blog_buscar")
+     */
+    public function buscar(ManagerRegistry $doctrine,  Request $request, int $page = 1): Response
+    {
+        $repository = $doctrine->getRepository(Post::class);
+        $searchTerm = $request->query->get('searchTerm', '');
+        $posts = $repository->findByTextPaginated($page, $searchTerm);
+        $recents = $repository->findRecents();
+        return $this->render('blog/blog.html.twig', [
+            'posts' => $posts,
+            'recents' => $recents,
+            'searchTerm' => $searchTerm
+        ]);
+    }
+
     #[Route('/blog', name: 'blog')]
     public function indexOld(): Response
     {
