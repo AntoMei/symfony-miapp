@@ -24,17 +24,16 @@ class BlogController extends AbstractController
         ]);
     }
 
-    #[Route('/blog/{page}', name: 'blog', requirements: ['page' => '\d+'])]
+    #[Route('/blog/{page}', name: 'blog')]
     public function index(ManagerRegistry $doctrine, int $page = 1): Response
     {
         $repository = $doctrine->getRepository(Post::class);
-        $posts = $repository->findAll($page);
+        $posts = $repository->findAllPaginated($page);
 
         return $this->render('blog/blog.html.twig', [
             'posts' => $posts,
         ]);
     }
-
 
      /**
      * @Route("/blog/new", name="new_post")

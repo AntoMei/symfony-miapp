@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Post;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use App\Pagination\Paginator;
 
 /**
  * @extends ServiceEntityRepository<Post>
@@ -63,6 +64,19 @@ class PostRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+    /**
+    * @return Post[] Returns an array of Post objects
+    */
+    public function findAllPaginated(int $page): Paginator
+    {
+        $qb =  $this->createQueryBuilder('p')
+            ->orderBy('p.publishedAt', 'DESC')            
+        ;
+        //Devolvemos los resutados de la página
+        return (new Paginator($qb))->paginate($page);
+    }
+
 
     /**
     * @return Post[] Returns an array of Post objects
